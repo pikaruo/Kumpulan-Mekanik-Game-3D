@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Games/music or sfx between scene/Scene/Audio Scene 1.unity
+    guid: 484ff17e782209b4ea78e7e0bb349536
+  - enabled: 1
+    path: Assets/Games/music or sfx between scene/Scene/Audio Scene 2.unity
+    guid: ba7b6861b4bb26b478cc3c19faf137d0
   m_configObjects: {}

@@ -5,12 +5,13 @@ using UnityEngine;
 public class PointerSpinWheelGame : MonoBehaviour
 {
 
-    public GameObject pointerCollect;
+    [Header("System Reward")]
+    public GameObject pointerCollectReward;
 
     // * This method for pointer reward
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        pointerCollect = collider.gameObject;
+        pointerCollectReward = collider.gameObject;
     }
 
 
