@@ -9,12 +9,11 @@ public class AudioManager : MonoBehaviour
 
     [Header("System Music")]
     public AudioSource audioSourceMusic;
-    public AudioClip[] clipMusic;
+    public SOMusicList dataMusic;
 
     [Header("System Sfx")]
     public AudioSource audioSourceSFX;
-    public AudioClip clipCoin;
-    public AudioClip clipItem;
+    public SOSfxList dataSFX;
 
     private void Awake()
     {
@@ -31,7 +30,7 @@ public class AudioManager : MonoBehaviour
 
     #region music
 
-    // * This method for controll mute unmute
+    // * This method for controll mute unmute music
     public void MusicMute()
     {
         if (audioSourceMusic.mute == false)
@@ -48,7 +47,7 @@ public class AudioManager : MonoBehaviour
 
     #region  sfx
 
-    // * This method for controll mute unmute
+    // * This method for controll mute unmute sfx 
     public void SfxMute()
     {
         if (audioSourceSFX.mute == false)

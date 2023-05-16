@@ -985,12 +985,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 116284dca5298644bb8b96825482fef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clipMusic:
-  - {fileID: 8300000, guid: 77e14a044efb3484995cb7faefc6d63d, type: 3}
-  - {fileID: 8300000, guid: 956da36068fbd44be85eca6aa690e089, type: 3}
   indexMusic: 1
-  clipCoin: {fileID: 8300000, guid: 4d941475735df4c7fa6f79fcf95cb263, type: 3}
-  clipItem: {fileID: 8300000, guid: b68cb3a0648a34fb592f2e027d95f2e0, type: 3}
 --- !u!114 &625009370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1688,8 +1683,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 625009369}
         m_TargetAssemblyTypeName: ChangeAudio, Assembly-CSharp
-        m_MethodName: ItemSfx
-        m_Mode: 1
+        m_MethodName: Sfx
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1989,8 +1984,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 625009369}
         m_TargetAssemblyTypeName: ChangeAudio, Assembly-CSharp
-        m_MethodName: CoinSfx
-        m_Mode: 1
+        m_MethodName: Sfx
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

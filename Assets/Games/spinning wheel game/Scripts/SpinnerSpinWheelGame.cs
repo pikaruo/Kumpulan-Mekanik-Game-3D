@@ -73,7 +73,7 @@ public class SpinnerSpinWheelGame : MonoBehaviour
     {
         if (spinChance > 0)
         {
-            spinChance -= 1;
+            spinChance--;
 
             durationSpin = Random.Range(durationSpinMin, durationSpinMax);
 
@@ -92,7 +92,7 @@ public class SpinnerSpinWheelGame : MonoBehaviour
     // * This method for add chance spin
     public void ButtonAddSpin()
     {
-        spinChance += 1;
+        spinChance++;
 
         textSpinChance.text = spinChance.ToString();
 

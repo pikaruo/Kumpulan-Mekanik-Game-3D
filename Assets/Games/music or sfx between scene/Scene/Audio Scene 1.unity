@@ -1052,12 +1052,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSourceMusic: {fileID: 1626412684}
-  clipMusic:
-  - {fileID: 8300000, guid: 77e14a044efb3484995cb7faefc6d63d, type: 3}
-  - {fileID: 8300000, guid: 956da36068fbd44be85eca6aa690e089, type: 3}
+  dataMusic: {fileID: 11400000, guid: ddc79bf350199bd47b170d7c9db658f2, type: 2}
   audioSourceSFX: {fileID: 1586599012}
-  clipCoin: {fileID: 8300000, guid: 4d941475735df4c7fa6f79fcf95cb263, type: 3}
-  clipItem: {fileID: 8300000, guid: b68cb3a0648a34fb592f2e027d95f2e0, type: 3}
+  dataSFX: {fileID: 11400000, guid: 31a19c1c4ee6c6c4abe280527fc75fde, type: 2}
 --- !u!1 &791011217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1736,12 +1733,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 625009369}
         m_TargetAssemblyTypeName: ChangeAudio, Assembly-CSharp
-        m_MethodName: ItemSfx
-        m_Mode: 1
+        m_MethodName: Sfx
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2037,8 +2034,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 625009369}
         m_TargetAssemblyTypeName: ChangeAudio, Assembly-CSharp
-        m_MethodName: CoinSfx
-        m_Mode: 1
+        m_MethodName: Sfx
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

@@ -18,7 +18,7 @@ public class AudioSettings : MonoBehaviour
     private void Start()
     {
 
-        // * music
+        // * check mute unmute music
         if (AudioManager.Instance.audioSourceMusic.mute == true)
         {
             muteMusicButton.image.sprite = spriteMute[1];
@@ -30,7 +30,7 @@ public class AudioSettings : MonoBehaviour
 
         volumeMusicSlider.value = AudioManager.Instance.audioSourceMusic.volume;
 
-        // * sfx
+        // * check mute unmute sfx
         if (AudioManager.Instance.audioSourceSFX.mute == true)
         {
             muteSFXButton.image.sprite = spriteMute[1];
@@ -45,6 +45,7 @@ public class AudioSettings : MonoBehaviour
 
     #region music
 
+    // * This method for controlle volume music
     public void VolumeMusic()
     {
         AudioManager.Instance.audioSourceMusic.volume = volumeMusicSlider.value;
@@ -61,6 +62,7 @@ public class AudioSettings : MonoBehaviour
         }
     }
 
+    // * This method for controlle mute unmute music
     public void MusicMute()
     {
         AudioManager.Instance.MusicMute();
@@ -79,6 +81,7 @@ public class AudioSettings : MonoBehaviour
 
     #region sfx
 
+    // * This method for controlle volume sfx
     public void VolumeSfx()
     {
         AudioManager.Instance.audioSourceSFX.volume = volumeSFXSlider.value;
@@ -95,6 +98,7 @@ public class AudioSettings : MonoBehaviour
         }
     }
 
+    // * This method for controlle mute unmute sfx
     public void SfxMute()
     {
         AudioManager.Instance.SfxMute();
