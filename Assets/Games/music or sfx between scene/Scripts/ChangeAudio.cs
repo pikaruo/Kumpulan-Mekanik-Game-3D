@@ -6,7 +6,7 @@ public class ChangeAudio : MonoBehaviour
 {
 
     [Header("System Music")]
-    public int indexMusic;
+    [SerializeField] private int indexMusic;
     public static int playIndexMusic;
 
     private void Start()
@@ -21,12 +21,13 @@ public class ChangeAudio : MonoBehaviour
 
     #region music
 
+    // * This method for change music other scene
     public void ChangeMusic(int indexMusic)
     {
-        if (AudioManager.Instance.audioSourceMusic.clip != AudioManager.Instance.clipMusic[indexMusic])
+        if (AudioManager.Instance.audioSourceMusic.clip != AudioManager.Instance.dataMusic.music[indexMusic])
         {
             AudioManager.Instance.audioSourceMusic.Stop(); // stop audio
-            AudioManager.Instance.audioSourceMusic.clip = AudioManager.Instance.clipMusic[indexMusic]; // change audio by index
+            AudioManager.Instance.audioSourceMusic.clip = AudioManager.Instance.dataMusic.music[indexMusic]; // change audio by index
             AudioManager.Instance.audioSourceMusic.Play(); // play music
         }
     }
@@ -34,14 +35,10 @@ public class ChangeAudio : MonoBehaviour
     #endregion
 
     #region sfx
-    public void CoinSfx()
-    {
-        AudioManager.Instance.audioSourceSFX.PlayOneShot(AudioManager.Instance.clipCoin);
-    }
 
-    public void ItemSfx()
+    public void Sfx(int indexSfx)
     {
-        AudioManager.Instance.audioSourceSFX.PlayOneShot(AudioManager.Instance.clipItem);
+        AudioManager.Instance.audioSourceSFX.PlayOneShot(AudioManager.Instance.dataSFX.sfx[indexSfx]);
     }
     #endregion
 }
