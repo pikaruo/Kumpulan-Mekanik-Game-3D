@@ -21,6 +21,7 @@ public class EndlessRunGameManager : MonoBehaviour
     private void Start()
     {
         totalCoin += collectCoin;
+        Debug.Log("Total Coin : " + totalCoin);
 
         collectCoin = 0;
 

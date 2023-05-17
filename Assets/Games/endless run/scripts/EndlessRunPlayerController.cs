@@ -50,18 +50,9 @@ public class EndlessRunPlayerController : MonoBehaviour
 
             Sliding();
         }
-    }
 
-    private void FixedUpdate()
-    {
-        if (EndlessRunGameManager.isGmeStarted == false)
-        {
-            return;
-        }
-        else
-        {
-            characterController.Move(direction * Time.fixedDeltaTime);
-        }
+        // * Move player
+        characterController.Move(direction * Time.deltaTime);
     }
 
     // * This method for move to left or right
@@ -103,11 +94,7 @@ public class EndlessRunPlayerController : MonoBehaviour
         }
 
         //transform.position = targetPosition;
-        if (transform.position == targetPosition)
-        {
-            return;
-        }
-        else
+        if (transform.position != targetPosition)
         {
             Vector3 diff = targetPosition - transform.position;
             Vector3 moveDir = diff.normalized * 25 * Time.deltaTime;
@@ -126,10 +113,6 @@ public class EndlessRunPlayerController : MonoBehaviour
     // * This method for jump
     private void Jump()
     {
-
-
-        // animator.SetBool("IsGrounded", characterController.isGrounded);
-
         if (characterController.isGrounded)
         {
             if (EndlessRunSwipeManager.swipeUp)
