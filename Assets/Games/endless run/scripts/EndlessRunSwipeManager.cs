@@ -7,18 +7,24 @@ public class EndlessRunSwipeManager : MonoBehaviour
     [Header("System Swipe")]
     public static bool tap, swipeLeft, swipeRight, swipeUp, swipeDown;
     private bool isDraging = false;
+    [SerializeField] private bool isMobileController = false;
     private Vector2 startTouch, swipeDelta;
 
     private void Update()
     {
         tap = swipeDown = swipeUp = swipeLeft = swipeRight = false;
 
-        // * Mouse Inputs
-        MouseInputs();
-
-        // * Mobile Input
-        // MobileInput();
-
+        // * swipe controller
+        if (isMobileController == true)
+        {
+            // * Mobile Input
+            MobileInput();
+        }
+        else
+        {
+            // * Mouse Inputs
+            MouseInputs();
+        }
 
         // * calculate the distance
         CalculateDistance();
